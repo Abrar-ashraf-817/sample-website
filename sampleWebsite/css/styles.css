@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* percentage of user's browser fontsize so that 1rem=10px*/
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  font-family: GothamNarrowBook, Helvetica Neue, Helvetica, Arial, sans-serif;
+  position: relative;
+  color: #41504f;
+}
+
+/* header */
+.header{}
+
+.main-nav{
+display:flex;
+gap: 1rem;
+align-items: center;
+justify-content: flex-start;
+background-color: #0751ac;
+ height: 7.2rem;
+ 
+}
+
+
+
+.main-nav-list{display:flex;
+justify-content: flex-start;
+
+color: #ffffff;
+gap: 2rem;
+margin: 0 3rem;
+font-size: 1.4rem;
+}
+.main-nav-list li {
+  list-style: none;
+}
+.main-nav-list a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.main-nav-list a:hover{
+  color: #ffffff;
+  text-decoration: underline;
+}
+.main-nav-list a:active{color: #ffffff;}
+.logo-container{    
+    display:flex;
+justify-content: center;
+  margin: 0 auto;
+    }
+.search{
+    display:flex;
+    gap: 2rem;
+justify-content: space-between;
+   margin: 0 3rem;
+   font-size: 1.4rem;
+}
+
+.search a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.search a:hover{
+  color: #ffffff;
+  text-decoration: underline;
+}
+.search a:active{color: #ffffff;}
+/* Hero */
+.carousel {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+    .slide {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+    .slide.active {
+      display: block;
+    }
+    .slide video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .slide-buttons {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      z-index: 1000;
+      background-color: #41504f67;
+      border-radius: 25px;
+      height : 2rem;
+    }
+    .slide-button {
+      position: relative;
+      width: 60px;
+      height: 8px;
+      background: rgba(255,255,255,0.3);
+      transform: translateY(50%);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .slide-button .progress {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      width: 0%;
+      background: #00aaff;
+      border-radius: 4px;
+    }
+
+
+/* Section 1 */
+
+.who-we-are{
+  height: 200rem;
+}
+.movingtext{
+  position: relative;
+}
+
+.movingtext-wrapper{
+  height : 20rem;
+}
+.heading-we-are {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  text-align: center;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2.4rem;
+  padding-top: 6.4rem;
+}
+
+/*section 2*/
+
+
+/*footer*/
+.footer {
+  padding: 12.8rem 0;
+  border-top: 2px solid #888;
+  background-color: #051066;
+  color: #fff;
+  position: relative;
+}
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+.footer-nav.list {
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #fff;
+  transition: all 300ms;
+}
+.footer-link:hover,
+.footer-link:active {
+  text-decoration: underline;
+}
+
+.footer::before {
+  content: "";
+  padding: 2rem 50%;
+  background-image: linear-gradient(#fff, #051066);
+  /* z-index: -1; */
+  position: absolute;
+  top: -2rem;
+}
+/*general components*/
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+
+
+img { max-width: 25rem }
+
+.bg-dark-blue{
+  background-image: linear-gradient(#051066,#3d50db);
+}
