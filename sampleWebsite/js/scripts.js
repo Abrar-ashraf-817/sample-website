@@ -36,4 +36,54 @@ function moveText(){
         // Using translate3d can sometimes leverage hardware acceleration for smoother performance.
       }
 
+
 obs.observe(document.querySelector(".who-we-are"));
+
+
+const slides = document.querySelectorAll('.slide');
+const buttons = document.querySelectorAll('.slide-button');
+
+function showSlide(index) {
+  slides.forEach((s, i) => {
+    s.classList.toggle('active', i === index);
+    const vid = s.querySelector('video');
+    if (vid) {
+      if (i === index) {
+        vid.currentTime = 0;
+        vid.play();
+        // start listening for progress
+        vid.addEventListener('timeupdate', updateProgressForActive, false);
+      } else {
+        // pause and reset listener for non-active videos
+        vid.pause();
+        vid.removeEventListener('timeupdate', updateProgressForActive, false);
+        // also reset its progress bar
+        const pb = buttons[i].querySelector('.progress');
+        if (pb) pb.style.width = '0%';
+      }
+    }
+  });
+  buttons.forEach((btn, i) => btn.classList.toggle('active', i === index));
+}
+
+// This function will only handle progress of the active video
+function updateProgressForActive(event) {
+  const vid = event.target;
+  const slide = vid.closest('.slide');
+  const index = Array.from(slides).indexOf(slide);
+  if (index < 0) return;
+  const progressBar = buttons[index].querySelector('.progress');
+  if (!progressBar) return;
+  const percent = (vid.currentTime / vid.duration) * 100;
+  progressBar.style.width = percent + '%';
+}
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const t = parseInt(btn.getAttribute('data-target'), 10);
+    showSlide(t);
+  });
+});
+
+// initialize first slide
+showSlide(0);
