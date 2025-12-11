@@ -9,24 +9,52 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/general_components.css" />
     
+<link rel="stylesheet" type="text/css" href="js/slick-1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="js/slick-1.8.1/slick/slick-theme.css"/>
+    
     <title>Sample</title>
   </head>
   <body class="page-container">
     <header class="header">
         <nav class="main-nav">
             <ul class="main-nav-list">
-                <li><a href="#" class="main-nav-link">who we are</a></li>
-                <li><a href="#" class="main-nav-link">what we do</a></li>
-                <li><a href="#" class="main-nav-link">sustainability</a></li>
-                <li><a href="#" class="main-nav-link">investors</a></li>
+                <li><a href="#" class="main-nav-link">who we are</a>
+                  <ul class="dropdown">
+                    <li><a href="#" class="drop-link">link1</a></li>
+                    <li><a href="#" class="drop-link">link</a></li>
+                    <li><a href="#" class="drop-link">link</a></li>
+                  </ul>
+                </li>
+
+                <li><a href="#" class="main-nav-link">what we do</a>
+                                  <ul class="dropdown">
+                    <li><a href="#" class="drop-link">link2</a></li>
+                    <li><a href="#" class="drop-link">link</a></li>
+                    <li><a href="#" class="drop-link">link</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="main-nav-link">sustainability</a>
+                                  <ul class="dropdown">
+                    <li><a href="#" class="drop-link">link3</a></li>
+                    <li><a href="#" class="drop-link">link</a></li>
+                    <li><a href="#" class="drop-link">link</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="main-nav-link">investors</a>
+                                  <ul class="dropdown">
+                    <li><a href="#" class="drop-link">link4</a></li>
+                    <li><a href="#" class="drop-link">link</a></li>
+                    <li><a href="#" class="drop-link">link</a></li>
+                  </ul>
+                </li>
             </ul>
             <a class="logo-container" href="#">
             <img class="logo" src="" />
             </a>
             <div class="search">
-                <a href="#" class="btn main-nav-link">newsroom</a>
-                <a href="#" class="btn btn-white main-nav-link">careers</a>
-                <a href="#" class="btn btn-white main-nav-link">search</a>
+                <a href="#" class="btn2 main-nav-link">newsroom</a>
+                <a href="#" class="btn2 btn-white main-nav-link">careers</a>
+                <a href="#" class="btn2 btn-white main-nav-link">search</a>
             </div>
         </nav>
     </header>
@@ -68,19 +96,29 @@
           <p class="subheading">
           </p>
         </header>
-        <div class="movingtext-wrapper">
-          <span class="movingtext">Lorem ipsum dolor</span>
-          <span class="movingtext">Lorem ipsum dolor</span>
-          <span class="movingtext">Lorem ipsum dolor</span>
+        <div class="sec1-content">
+          <div class="movingtext-wrapper">
+            <span class="movingtext mov">Lorem ipsum</span>
+            <span class="movingtext justify-right">Lorem ipsum </span>
+            <span class="movingtext">Lorem ipsum </span>
+          </div>
+          
+          <div class="image-box">
+            <img alt="" src="image/istock.jpg" class="img-fluid">
+            <img alt="" src="image/istock.jpg" class="img-fluid2">
+            <img alt="" src="image/istock.jpg" class="img-fluid3">
+          </div>
+          
+          <span class="block text-animation">
+            
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt asperiores aspernatur quidem reiciendis hic. Magnam dicta, debitis consectetur sapiente voluptatum similique nihil modi, adipisci omnis accusamus earum, assumenda ab? Officia.
+            
+          </span>
+          
+          
+          <a href="#" class="btn btn-full center">discover who we are</a>
         </div>
-        <div class="image-box">
-          <img alt="" src="image/istock.jpg" class="img-fluid">
-          <img alt="" src="image/istock.jpg" class="img-fluid">
-          <img alt="" src="image/istock.jpg" class="img-fluid">
-        </div>
-        <span class="block text-animation"></span>
-
-            <a href="#" class="btn btn-full">discover who we are</a>
+        <div class="padding"></div>        
       </section>
             <section class="what-we-do">
         <header class="container">
@@ -110,35 +148,54 @@
         </div>
       </section>
             <section class="slic-slider">
-              <div class="your-class">
-                <div class="card">
-                  <div class="card-imgbox"><img alt="" src="image/istock.jpg" class="img-fluid"></div>
-                  <div class="card-textbox">
-                    <p>text</p>
-                    <p>text</p>
-                    <a class="card-btn">btn</a>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-imgbox"><img alt="" src="image/istock.jpg" class="img-fluid"></div>
-                  <div class="card-textbox">
-                    <p>text</p>
-                    <p>text</p>
-                    <a class="card-btn">btn</a></div>
-                <div class="card">
-                  <div class="card-imgbox"><img alt="" src="image/istock.jpg" class="img-fluid"></div>
-                  <div class="card-textbox">
-                    <p>text</p>
-                    <p>text</p>
-                    <a class="card-btn">btn</a></div>
-              </div>
+              <div class="slider-container">
+    <div class="card-slider">
+      <!-- Slide 1 -->
+      <div class="card">
+        <img src="image/istock.jpg" alt="Placeholder image">
+        <div class="card-body">
+          <h3>Card Title 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="card">
+        <img src="image/istock.jpg" alt="Placeholder image">
+        <div class="card-body">
+          <h3>Card Title 2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="card">
+        <img src="image/istock.jpg" alt="Placeholder image">
+        <div class="card-body">
+          <h3>Card Title 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="card">
+        <img src="image/istock.jpg" alt="Placeholder image">
+        <div class="card-body">
+          <h3>Card Title 4</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+      <!-- add more slides as needed -->
+    </div>
+  </div>
       </section>
     </main>
     <footer class="footer">
       <div class="container grid grid--footer">
         <div class="logo-col">
           <a href="#" class="footer-logo">
-            <img class="logo" src="" />
+            <img class="logo" src="image/istock.jpg" />
           </a>
           <ul class="social-links">
             <li>
@@ -212,6 +269,9 @@
       </div>
     </footer>
     <script defer src="js/scripts.js"></script>
-  </body>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/slick-1.8.1/slick/slick.min.js"></script>
 
+  </body>
 </html>
