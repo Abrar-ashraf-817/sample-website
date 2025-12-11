@@ -1,4 +1,4 @@
-
+/*
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
@@ -36,8 +36,7 @@ function moveText(){
         // Using translate3d can sometimes leverage hardware acceleration for smoother performance.
       }
 
-
-obs.observe(document.querySelector(".who-we-are"));
+obs.observe(document.querySelector(".who-we-are"));*/
 
 
 const slides = document.querySelectorAll('.slide');
@@ -87,3 +86,27 @@ buttons.forEach(btn => {
 
 // initialize first slide
 showSlide(0);
+
+
+
+$(document).ready(function(){
+      $('.card-slider').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        infinite: false,
+        dots: true,
+        arrows: true,
+        variableWidth: true,  
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 1,
+              centerPadding: '40px'
+            }
+          }
+        ]
+      });
+    });
+
